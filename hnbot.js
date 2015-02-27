@@ -17,10 +17,14 @@ module.exports = function (req, res, next) {
 
     var index = 0;
     async.forEach(items, function(item, cb) {
-      botPayload += '<%url%|%rank%. %title%>\n'
-                      .replace('%url%', item.url)
-                      .replace('%rank%', index + 1)
-                      .replace('%title%', item.title);
+      if (item.type == 'job') {
+        botPayload += '';
+      } else {
+        botPayload += '<%url%|%rank%. %title%>\n'
+                        .replace('%url%', item.url)
+                        .replace('%rank%', index + 1)
+                        .replace('%title%', item.title);
+      }
       index++;
       cb();
     }, function(err) {
