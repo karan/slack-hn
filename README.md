@@ -1,3 +1,5 @@
+**SEE https://github.com/karan/slack-news INSTEAD**
+
 slack-hn
 ========
 
