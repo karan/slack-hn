@@ -1,6 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var hnbot = require('./hnbot');
+var hncron = require('./hncron');
  
 var app = express();
 var port = process.env.PORT || 3000;
